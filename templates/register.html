@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Open sans";
+            color: #fff;
+            background-color: rgb(13, 8, 34);
+        }
+
+        div button {
+            align-items: center;
+        }
+
+        section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyR9cmBkqhfLyI9CHpmlHpmX-0NxMsNrYviQ&usqp=CAU");
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .form-container {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+            width: 500px;
+            padding: 50px 30px;
+            border-radius: 10px;
+            box-shadow: 7px 7px 60px #000;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .control input {
+            width: 100%;
+            display: block;
+            padding: 10px;
+            color: #222;
+            border: none;
+            outline: none;
+            margin: 1em 0;
+        }
+
+        .control input [type="submit"] {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            opacity: .7;
+            transition: opacity .3s ease;
+        }
+
+        .control input[text="submit"]:hover {
+            opacity: 1;
+        }
+
+        .link {
+            text-align: center;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #fff;
+            transition: opacity .3s ease;
+        }
+
+        .link a:hover {
+            opacity: 1;
+        }
+
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+      
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+        }
+
+        select {
+            width: 220px;
+            height: 30px;
+        }
+
+        option {
+            width: 220px;
+            height: 30px;
+
+        }
+
+        input {
+            width: 220px;
+            height: 30px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <section><br>
+        <nav>
+            <img id="im" src="static/logo.png" class="logo" width="60px" height="60px">
+            <ul>
+                <li><a href="/home" id="demo">Home</a></li>
+                <li><a href="/succ" id="demo1">Ideas</a></li>
+
+            </ul>
+            <script>
+                            document.getElementById("demo").onmouseover = function () { mouseOver() };
+            document.getElementById("demo").onmouseout = function () { mouseOut() };
+
+            function mouseOver() {
+                document.getElementById("demo").style.color = "red";
+            }
+
+            function mouseOut() {
+                document.getElementById("demo").style.color = "white";
+            }
+            document.getElementById("demo1").onmouseover = function() {mouseOver1()};
+            document.getElementById("demo1").onmouseout = function() {mouseOut1()};
+            
+            function mouseOver1() {
+              document.getElementById("demo1").style.color = "red";
+            }
+            
+            function mouseOut1() {
+              document.getElementById("demo1").style.color = "white";
+            }
+            </script>
+        </nav>
+        <div>
+            <center>
+                <p style="color: yellow">{{reg}}</p>
+                <p style="color: red;">{{res}}</p>
+            </center>
+        </div>
+        <div class="form-container">
+            <h1>Register</h1>
+                <div class="card-body">
+                    <center>
+                        <form action="/register" method="post">
+                            <table style="column-gap: 200px">
+                                <tr>
+                                    <td>
+                                        <p>Name:</p>
+                                    <td><input type="text" name="username" onfocus="this.placeholder=''" placeholder="Enter your name" size="30"
+                                            required></td>
+                                    </td></tr>
+                                    <td>
+                                        <p>college:</p>
+                                    <td><input type="text" name="college" onfocus="this.placeholder=''" placeholder="Enter college name" size="30"
+                                            required></td>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <p>password:</p>
+                                    </td>
+                                    <td><input type="password" name="password" onfocus="this.placeholder=''" placeholder="Enter your password"
+                                            size="30" required>
+                                    </td></tr><tr>
+                                    <td>
+                                        <p>Re-type password:</p>
+                                    </td>
+                                    <td><input type="password" name="rpass" onfocus="this.placeholder=''" placeholder="Re-type your password"
+                                            size="30" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Mobile number:</p>
+                                    </td>
+                                    <td><input type="text" onfocus="this.placeholder=''" placeholder="Enter your mobile number" name="number"
+                                            size="30" required>
+                                    </td></tr><tr>
+                                    <td>
+                                        <p>Email:</p>
+                                    </td>
+                                    <td><input type="text" name="email" onfocus="this.placeholder=''" placeholder="Enter your email id" size="30"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Year of study:</p>
+                                    </td>
+                                    <TD>
+                                        <select name="year" required>
+                                            <option value="" hidden>select your year</option>
+                                            <option value="1st year">1st year</option>
+                                            <option value="2nd year">2nd year</option>
+                                            <option value="3rd year">3rd year</option>
+                                            <option value="4th year">4th year</option>
+                                    </TD>
+                                </tr>
+                        </table>
+                    </center>
+
+                    <center>
+                        <div>
+                            <br><button id="submit" type="submit" class="btn btn-danger">Register</button></div>
+                    </center></form>
+            <div class="link"><br>
+                <p>Already Have An Account? <a href="/log" style="color: yellow;">Login</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

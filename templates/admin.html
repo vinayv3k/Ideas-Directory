@@ -1,0 +1,211 @@
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsaxoo55_Gz7NsQCM_FUebV70XgNRyaDeaQ&usqp=CAU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "open sans";
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #card {
+            background-color: rgb(7, 7, 7);
+            height: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2,
+        h1,
+        H3 {
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #head {
+            height: 8px;
+            background-color: white;
+        }
+
+        #foot {
+            background-image: url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
+
+            height: 250px;
+
+        }
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+     
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+        }
+
+    
+
+        #btn {
+            width: 140px;
+        }
+        .card{
+            padding: 20px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <img id="im" src="static/logo.png" class="logo" width="60px" height="60px">
+        <ul>
+            <li><a href="/ideas" id="demo">Submissions</a></li>
+            <li><a href="/succ2" id="demo1">Ideas</a></li>
+            <li><a href="/home" id="demo2"><button class="btn btn-danger">Log out</button></a></li>
+        </ul>
+        <script>
+            document.getElementById("demo").onmouseover = function () { mouseOver() };
+            document.getElementById("demo").onmouseout = function () { mouseOut() };
+
+            function mouseOver() {
+                document.getElementById("demo").style.color = "red";
+            }
+
+            function mouseOut() {
+                document.getElementById("demo").style.color = "white";
+            }
+            document.getElementById("demo1").onmouseover = function() {mouseOver1()};
+            document.getElementById("demo1").onmouseout = function() {mouseOut1()};
+            
+            function mouseOver1() {
+              document.getElementById("demo1").style.color = "red";
+            }
+            
+            function mouseOut1() {
+              document.getElementById("demo1").style.color = "white";
+            }
+            document.getElementById("demo2").onmouseover = function() {mouseOver2()};
+            document.getElementById("demo2").onmouseout = function() {mouseOut2()};
+            
+            function mouseOver2() {
+              document.getElementById("demo2").style.color = "red";
+            }
+            
+            function mouseOut2() {
+              document.getElementById("demo2").style.color = "white";
+            }
+
+        </script>
+    </nav>
+
+</div>
+    </div>
+    <div class="container mt-5"><br><br><br><br>
+        <div class="card bg-transparent text-white border-white">
+            <div class="row">
+                <div class="col-md-3 border-white">
+                    <img src="static/fsd.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-title">
+                        <b>
+                            <h5>FULL STACK WEB DEVELOPMENT</h5>
+                        </b>
+                    </div>
+                    <p>What is a Full Stack Developer? The full stack developer definition is “someone who can work on
+                        both the back-end and front-end of systems.” This means that they can develop fully fledged
+                        platforms (with databases, servers and clients) which don't need other applications to function.
+                    </p><br>
+                    <button class="btn btn-light"><a href="https://www.w3schools.com/whatis/whatis_fullstack.asp"
+                            text-decoration="none" style="color: black;text-decoration:none">Learn more</a></button>
+                </div>
+
+            </div>
+        </div><br>
+        <div class="card bg-transparent text-white border-white">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="static/bc.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-title">
+                        <b>
+                            <h5>BLOCK CHAIN TECHOLOGY</h5>
+                        </b>
+                    </div>
+                    <P>Blockchain defined: Blockchain is a shared, immutable ledger that facilitates the process of
+                        recording transactions and tracking assets in a business network. An asset can be tangible (a
+                        house, car, cash, land) or intangible (intellectual property, patents, copyrights, branding).
+                    </P>
+                    <button class="btn btn-light"><a href="https://www.ibm.com/in-en/topics/what-is-blockchain"
+                            style="color: black;text-decoration:none">Learn more</a></button><br>
+                </div>
+
+            </div>
+        </div><br>
+        <div class="card bg-transparent text-white  border-white">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="static/aws.jpg" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-title">
+                        <b>
+                            <h5>AWS</h5>
+                        </b>
+                    </div>
+                    <P>Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go
+                        pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can
+                        access technology services, such as computing power .</P>
+                    <button class="btn btn-light"><a
+                            href="https://aws.amazon.com/what-is-cloud-computing/?trk=14a4002d-4936-4343-8211-b5a150ca592b&sc_channel=ps&s_kwcid=AL!4422!3!453325184782!e!!g!!aws&ef_id=Cj0KCQjw-fmZBhDtARIsAH6H8qhUdgTtd1e6voZ9awCuAg2KSCnVJd63Hc6Sw1olmzD5YX6Ge63rsBwaAnhWEALw_wcB:G:s&s_kwcid=AL!4422!3!453325184782!e!!g!!aws"
+                            style="color: black;text-decoration:none">Learn more</a></button><br>
+                </div>
+
+            </div>
+        </div><br>
+        <div class="card bg-transparent text-white border-white">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="static/iot.avif" class="img-fluid">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-title">
+                        <b>
+                            <h5>IOT</h5>
+                        </b>
+                    </div>
+                    <P>The internet of things, or IoT, is a system of interrelated computing devices, mechanical and
+                        digital machines, objects, animals or people that are provided with unique identifiers (UIDs)
+                        and the ability to transfer data over a network without requiring human-to-human or
+                        human-to-computer interaction</P>
+                    <button class="btn btn-light"><a href="https://www.oracle.com/in/internet-of-things/what-is-iot/"
+                            style="color: black;text-decoration:none">Learn more</a></button><br>
+                </div>
+
+            </div>
+        </div><br><br>
+    </div>
+</body>
+
+</html>

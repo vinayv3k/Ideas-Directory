@@ -1,0 +1,302 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsaxoo55_Gz7NsQCM_FUebV70XgNRyaDeaQ&usqp=CAU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "open sans";
+        }
+
+        h5,
+        h2 {
+            color: white;
+            text-align: center;
+            font-family: "Open sans";
+        }
+
+        h4 {
+            color: white;
+            text-align: center;
+            font-family: "Open sans";
+        }
+
+
+        p {
+            color: white;
+        }
+
+        #head {
+            height: 50px;
+
+        }
+
+        #a {
+            width: 100px;
+            height: 40px;
+        }
+
+        select {
+            background-color: rgb(36, 34, 34);
+            color: white;
+            height: 40px;
+            padding: 5px;
+        }
+
+        table td {
+            border: 1px solid white;
+            padding: 20px;
+            font-family: "Open sans"
+        }
+
+        table th {
+            border: 1px solid white;
+            padding: 20px;
+            font-family: "Open sans";
+        }
+
+        #btn {
+            width: 95px;
+        }
+
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 17px;
+        }
+
+
+
+        #btn {
+            width: 140px;
+        }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(8, 5, 27, 0.849);
+            /* Black w/ opacity */
+
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            margin-top: 100px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #cod {
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+            width: auto;
+            height: auto;
+            padding: 30px;
+            background-color: white;
+            margin: 200px;
+        }
+    </style>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+      </svg>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: black">
+    <div style="height: 100px">
+        <nav>
+            <img id="im" src="static/logo.png" class="logo" width="60px" height="60px">
+            <ul>
+                <li><a href="/uhome" id="demo">Home</a></li>
+            </ul>
+            <script>
+                document.getElementById("demo").onmouseover = function () { mouseOver() };
+                document.getElementById("demo").onmouseout = function () { mouseOut() };
+
+                function mouseOver() {
+                    document.getElementById("demo").style.color = "red";
+                }
+
+                function mouseOut() {
+                    document.getElementById("demo").style.color = "white";
+                }
+            </script>
+        </nav>
+
+    </div>
+    <div id="head">
+        <center>
+            <form action="/ufilter" method='post'>
+
+
+                <p style="color: white;margin-right: 20px;">Filter by Domain:
+                    <select name="dom" style="margin-right: 20px" required>
+                        <option value="" hidden>select a domain</option>
+                        <option value="Full Stack Development">Full Stack Development</option>
+                        <option value="Internet Of Things(IoT)">Internet Of Things(IoT)</option>
+                        <option value="Amazon Web Services(AWS)">Amazon Web Services(AWS)</option>
+                        <option value="Block Chain Technology">Block Chain Technology</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                    <button style="width: 120px" type="submit" class="btn btn-success">Filter</button>
+                </p>
+
+            </form>
+        </center>
+    </div>
+    <div style="margin: 5px" class="card bg-transparent   m-1">
+        {% if not data %}
+
+        <br><br>
+        <div>
+            <h5 style="text-align: center">No Ideas have been submitted yet</h5><br><br>
+        </div>
+        {% endif %}
+        {% if data %}
+        <div>
+            <div >
+                <center>
+                    <h6 style="color: yellow;margin-left: 1100px;">{{status}}</h6></center>
+                <center>
+            </div>
+                <h2 style="color: white">Ideas on various domains</h2>\
+                            </center>
+
+        </div>
+
+        <table style="border: 1px solid white;margin-bottom: 20px; color: white;margin: 20px;">
+
+            <tr>
+                <th>
+                    <h4>Title</h4>
+                </th>
+                <th>
+                    <h4>Domain</h4>
+                </th>
+                <th colspan="2">
+                    <h4>Description</h4>
+                </th>
+
+            </tr>
+            {% for i in data %}
+            {% set x=i['name'] %}
+
+            <tr>
+                <td style="width:20%;margin-top: 20px">
+                    <h5>{{i['title']}}</h5>
+                </td>
+                <td style="text-align: center;width:20%">
+                    <h5>{{i['domain']}}</h5>
+                </td>
+                <td style="text-align: center;width:45%">
+                    <h5>{{i['desc']}}</h5>
+                </td>
+                <td style="text-align: center"><button id="myBtn" class="btn btn-warning"
+                        onclick="show('a{{x}}')" style="width: 145px">Details</button></a><br><br>
+                    <a href="/fav?id={{i['_id']}} "><button id="btn" class="btn btn-success">Add to favourites</button></a><br><br>
+                    <a href="/like?id={{i['_id']}}"><img style="height: 20px;width:20px;margin-right:10px;" src="static/thumb.png" alt=""></i></a><p style="margin-top: 5px;margin: left 50px;">Likes:{{i['likes']}}</p>
+                    
+                </td>
+
+
+            <div id="a{{x}}" class="modal">
+                {% for j in data2 %}
+                {% if j['users']==i['name'] %}
+                <div id="cod">
+                    <div class="card shadow outline-dark bg-transparent">
+                        <center>
+                            Name:{{j['users']}}<br>
+                            College:{{j['college']}}<br>
+                            Year:{{j['year']}}<br>
+                            Number:{{j['number']}}<br>
+                            Email:{{j['email']}}
+
+                        </center>
+                        <div class="card-footer">
+                            <center>
+                                <button onclick="hide('a{{x}}')" class="btn btn-danger close">close</button>
+                            </center>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+
+                {% endif %}
+                {% endfor %}
+            </div>
+
+
+            {% endfor %}
+
+
+        </table>
+    </div>  
+    {% endif %}
+    </div>
+    <script>
+        function show(x) {
+            console.log(x)
+            document.getElementById(x).style.display = 'block'
+        }
+        function hide(x) {
+            document.getElementById(x).style.display = 'none'
+        } 
+    </script>
+</body>
+
+</html>

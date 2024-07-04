@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <style>
+
+body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKsaxoo55_Gz7NsQCM_FUebV70XgNRyaDeaQ&usqp=CAU');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "open sans";
+        }
+        h5,h2 {
+            color: white;
+            text-align: center;
+            font-family: "Open sans";
+        }
+        h4 {
+            color: white;
+            text-align: center;
+            font-family: "Open sans";
+        }
+        
+
+        p {
+            color: white;
+        }
+
+        #head {
+            height: 50px;
+            
+        }
+
+        #a {
+            width: 100px;
+            height: 40px;
+        }
+
+        select {
+            background-color: rgb(36, 34, 34);
+            color: white;
+            height: 40px;
+            padding: 5px;
+        }
+        table td{
+            border:1px solid white; 
+            padding: 20px;
+            font-family: "Open sans"
+        }
+        table th{
+            border: 1px solid white;
+            padding: 20px;
+            font-family: "Open sans";
+        }
+        #btn{
+            width: 95px;
+        }
+        nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav ul li{
+    list-style:none;
+    display: inline-block;
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: black">
+    <div style="height: 100px">
+        <nav>
+            <img id="im" src="static/logo.png" class="logo" width="60px" height="60px">
+            <ul>
+                <li><a href="/uhome" id="demo">Home</a></li>
+            </ul>
+            <script>
+                document.getElementById("demo").onmouseover = function() {mouseOver()};
+                document.getElementById("demo").onmouseout = function() {mouseOut()};
+                
+                function mouseOver() {
+                  document.getElementById("demo").style.color = "red";
+                }
+                
+                function mouseOut() {
+                  document.getElementById("demo").style.color = "white";
+                }
+                </script>
+        </nav>
+
+    </div>
+    <div id="head"><center>
+        <form action="/myfilter" method='post'>
+            
+                        
+                            <p style="color: white;margin-right: 20px;">Filter by Domain:
+                        <select name="dom" style="margin-right: 20px" required>
+                                <option value="" hidden>select a domain</option>
+                                <option value="Full Stack Development">Full Stack Development</option>
+                                <option value="Internet Of Things(IoT)">Internet Of Things(IoT)</option>
+                                <option value="Amazon Web Services(AWS)">Amazon Web Services(AWS)</option>
+                                <option value="Block Chain Technology">Block Chain Technology</option>
+                                <option value="Other">Other</option>
+
+                            </select>
+                        
+                        <button style="width: 120px" type="submit" class="btn btn-success">Filter</button></p>
+
+        </form>
+    </center>
+    </div>
+                <div style="margin: 5px" class="card bg-transparent   m-1">
+                    {% if not data %}
+                    
+                    <br><br>
+                    <div>
+                        <h5 style="text-align: center">No Ideas have been submitted yet</h5><br><br>
+                    </div>
+                    {% endif %}
+                    {% if data %}
+                    <div ><br>
+                        <center>
+                            <h2 style="color: white">Ideas on various domains</h2>
+                        </center>
+        
+                    </div>
+                   
+                        <table
+                        style="border: 1px solid white;margin-bottom: 20px; color: white;margin: 10px;" >
+                        
+                        <tr>
+                            <th><h4>Title</h4></th>
+                            <th><h4>Domain</h4></th>
+                            <th colspan="2"><h4>Description</h4></th>
+                            
+                        </tr>
+                        {% for i in data %}
+
+                            <tr>
+                                <td style="width:20%;margin-top: 20px"><h5>{{i['title']}}</h5></td>
+                                <td style="text-align: center;width:20%"><h5>{{i['domain']}}</h5></td>
+                                <td style="text-align: center;width:45%"><h5>{{i['desc']}}</h5></td>
+                                    
+                                </td>
+                                
+                            
+                            </tr>
+
+
+
+                        {% endfor %}
+                       
+                        
+                    </table>
+                    </div>
+                    {% endif %}
+                </div>
+          </body>
+
+</html>
